@@ -1,4 +1,3 @@
-"use client";
 import { Contract, ContractAbi, Uint256, Web3 } from 'web3';
 import contractABI from './contract/abi.json';
 import { useEffect, useState } from 'react';
@@ -124,7 +123,7 @@ const contractInstance = (web3: Web3) => {
   )
 }
 
-export default function Home() {
+function App() {
   const [web3, setWeb3] = useState<Web3 | null>(null);
   const [accounts, setAccounts] = useState<Array<string>>([]);
   const [contract, setContract] = useState<Contract<ContractAbi>>();
@@ -173,3 +172,5 @@ export default function Home() {
     </main>
   );
 }
+
+export default App
